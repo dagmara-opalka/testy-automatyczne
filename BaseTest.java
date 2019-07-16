@@ -1,5 +1,5 @@
 package pop.tests;
-//to jest klasa bazowa ktora bedziemy wykorzystywac w innych testach
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,8 +8,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pop.pageobjects.*;
 
+//base test which we will use in other tests
 public class BaseTest {
-    protected WebDriver driver; //protected bo bedziemy dziedziczyc z tej klasy
+    protected WebDriver driver;
     protected HomePage  homePage;
     protected RegistrationConfrim registrationConfrim;
     protected RegistrationFormPage registrationFormPage;
@@ -19,10 +20,10 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
 
-        WebDriverManager.chromedriver().setup();     //ustawianie drivera
+        WebDriverManager.chromedriver().setup();     //set up the driver
         driver  =   new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js/");
+        driver.get("http://example.io/"); //change to a real website
 
         homePage = new HomePage(driver);
         registrationFormPage = new RegistrationFormPage(driver);
@@ -35,6 +36,6 @@ public class BaseTest {
     @AfterMethod
     public  void tearDown() {
 
-        driver.quit();  //w tej metodzie nam zamyka
+        driver.quit();  
     }
 }

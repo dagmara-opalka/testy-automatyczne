@@ -12,13 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ContactPage extends BasePage {
     private WebDriver driver;
 
-   /* private By nameInput = By.id("name");
-    private By emailInput = By.id("email");
-    private By messageInput = By.id("content");
-    private By submitButton = By.cssSelector("button[type=\"submit\"]");
-
-*/
-
 
 
     @FindBy(id = "name")
@@ -47,16 +40,7 @@ public class ContactPage extends BasePage {
         mySendKeys(messageInput, content);
         myClick(submitButton);
 
-        //nameInput.sendKeys(name);
-    //emailInput.sendKeys(email);
-    //messageInput.sendKeys(content);
-    //submitButton.sendKeys("button[type=\"submit\"]");
 
-
-//        driver.findElement(nameInput).sendKeys(name);
-//        driver.findElement(emailInput).sendKeys(email);
-//        driver.findElement(messageInput).sendKeys(message);
-//        driver.findElement(submitButton).click();
     }
     public String getMessageSentText() {
         By waitForMessage = By.cssSelector("span.message >h3");

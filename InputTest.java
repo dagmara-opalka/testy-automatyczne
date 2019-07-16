@@ -11,7 +11,7 @@ public class InputTest extends BaseTest {
     @Test
     public void regestrationShouldBeCorrect() {
 
-        driver.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js/#");
+        driver.get("http://example.io");
         WebElement signup = driver.findElement(By.xpath("//a[text()=\"Sign up today\"]"));
         signup.click();
         WebElement  username = driver.findElement(By.xpath("//*[@id=\"usernamesignup\"]"));

@@ -24,7 +24,7 @@ public class HeaderTest {
 
     @Test
     public void pageleaderShouldBeCorrect(){
-        driver.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js/#");
+        driver.get("http://example.io");
         WebElement header = driver.findElement(By.xpath("//h1[text() = \"Example headline 1\"]  "));
        String headerText = header.getText();
         Assert.assertEquals("Example Headline 1", headerText);

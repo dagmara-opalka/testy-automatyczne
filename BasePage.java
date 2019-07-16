@@ -30,42 +30,41 @@ public class BasePage {
     public void openContactPage() { contactButton.click(); }
 
     public void mySendKeys(WebElement element, String text) {
-                System.out.println("Wpisuję w element: " + element.toString() + " tekst: " + text);
+                System.out.println("Filling in: " + element.toString() + " text: " + text);
                 element.click();
                 element.clear();
                 element.sendKeys(text);
-//robi metoda screenshoty
+//this method takes a screenshot
             }
+			
             public void takeScreenshot() {
                 Screenshot scr = new AShot().takeScreenshot(driver);
                 File file = new File("screenshot"+ new Date().getTime() + "..png");
 
                 try
                 {
-                    ImageIO.write(scr.getImage(), formatName"png", file);
+                    ImageIO.write(scr.getImage(), "png", file);
 
                 } catch (IOException e) {
 
                     e.printStackTrace();
                 }
 
-                public void takeElementScreenshot(WebElement element) {
+            }
+			
+			public void takeElementScreenshot(WebElement element) {
 
-                    File file = new File("src/test/resources/screenshots/element_screenshot-" +new Date().getTime() + "..png" );
+                    File file = new File("src/test/resources/screenshots/element_screenshot-" +new Date().getTime() + ".png" );
                     try{
-                        ImageIO.write(scr.getImage(), formatName"png", file);
+                        ImageIO.write(scr.getImage(), "png", file);
                     } catch (IOException e) {
 
                         e.printStackTrace();
                     }
-                }
-
-
-
             }
 
             public void myClick(WebElement element) {
-                System.out.println("Klikam w element: " +element.toString()+ "element" + element);
+                System.out.println("Clicking the element: " +element.toString()+ "element" + element);
             element.click();
             element.clear();
             element.myClick(element);

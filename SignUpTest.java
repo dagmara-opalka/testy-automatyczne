@@ -1,5 +1,5 @@
 package exercise_2;
-//Open the URL, find button Sign Up, click it, find header, download text, asertion
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+//Open the URL, find button Sign Up, click it, find header, download text, asertion
 public class SignUpTest {
     private WebDriver driver;
 
@@ -24,7 +25,7 @@ public class SignUpTest {
     @Test
     public void regestrationShouldBeCorrect() {
 
-        driver.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js/#");
+        driver.get("http://example.io");
         WebElement signup = driver.findElement(By.xpath("//a[text()=\"Sign up today\"]"));
         signup.click();
         WebElement signup1 = driver.findElement(By.xpath("//h1[contains(text(), \"Sign up\")]"));
